@@ -1,0 +1,20 @@
+<div class="backgroundHeader"></div>
+<div class="backgroundBody"></div>
+
+
+<div class="chatContainer">
+ <app-sidebar (conversationClicked)="onConversationSelected($event)"></app-sidebar>
+  
+ <div id="chat">
+    <div class="chatPlaceholder" *ngIf="!conversation">
+      <img src="../assets/images/chatPlaceholder.png"/><
+
+      <h2>Keep your phone connected</h2>
+      <p>WhatsApp connects your phone to sync messages. To reduce data<br> usage, connects your phone to WiFi </p>
+      <div class="seperator"></div>
+      <p>Whatsapp in available for Window. <a href='a'>Get it here</a></p>
+    </div>
+
+    <app-chat [conversation]="conversation" *ngIf="conversation"></app-chat>
+  </div>
+</div>
